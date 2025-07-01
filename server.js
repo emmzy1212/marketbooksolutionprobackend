@@ -25,10 +25,14 @@ import { authenticateToken } from './middleware/auth.js'
 dotenv.config()
 
 const app = express()
+
+// ✅ Add this line to fix express-rate-limit + proxy IP detection
+app.set('trust proxy', 1)
+
 const server = createServer(app)
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://marketbooksolutionpro.vercel.app",
     methods: ["GET", "POST"]
   }
 })
@@ -36,7 +40,7 @@ const io = new Server(server, {
 // Middleware
 app.use(helmet())
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: process.env.FRONTEND_URL || 'https://marketbooksolutionpro.vercel.app',
   credentials: true
 }))
 
