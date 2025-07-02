@@ -36,8 +36,11 @@ const server = createServer(app)
 const allowedOrigins = [
   'https://marketbooksolutionpro.vercel.app',
   'http://localhost:5173',
-  'http://marketbooksolution.com', // Already added
-  
+  'http://marketbooksolution.com',
+  'https://marketbooksolution.com',
+  'http://www.marketbooksolution.com',
+  'https://www.marketbooksolution.com',
+   'www.marketbooksolution.com'
 ]
 
 const io = new Server(server, {
@@ -178,8 +181,6 @@ process.on('SIGINT', async () => {
 startServer()
 
 export { io }
-
-
 
 
 // import express from 'express'
