@@ -34,7 +34,8 @@ const server = createServer(app)
 // Allowed origins for CORS
 const allowedOrigins = [
   'https://marketbooksolutionpro.vercel.app',
-  'http://localhost:5173'
+  'http://localhost:5173',
+  'http://marketbooksolution.com' // Added this domain for CORS
 ]
 
 const io = new Server(server, {
@@ -175,7 +176,6 @@ process.on('SIGINT', async () => {
 startServer()
 
 export { io }
-
 
 
 
