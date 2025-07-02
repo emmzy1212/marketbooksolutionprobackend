@@ -181,8 +181,6 @@ export { io }
 
 
 
-add this https://www.marketbooksolution.com to the cors
-
 
 // import express from 'express'
 // import cors from 'cors'
