@@ -31,11 +31,13 @@ app.set('trust proxy', 1)
 
 const server = createServer(app)
 
+
 // Allowed origins for CORS
 const allowedOrigins = [
   'https://marketbooksolutionpro.vercel.app',
   'http://localhost:5173',
-  'http://marketbooksolution.com' // Added this domain for CORS
+  'http://marketbooksolution.com', // Already added
+  'https://www.marketbooksolution.com' // Added this domain for CORS
 ]
 
 const io = new Server(server, {
@@ -177,6 +179,9 @@ startServer()
 
 export { io }
 
+
+
+add this https://www.marketbooksolution.com to the cors
 
 
 // import express from 'express'
