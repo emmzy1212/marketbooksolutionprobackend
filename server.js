@@ -37,7 +37,7 @@ const allowedOrigins = [
   'https://marketbooksolutionpro.vercel.app',
   'http://localhost:5173',
   'http://marketbooksolution.com', // Already added
-  'https://www.marketbooksolution.com' // Added this domain for CORS
+  
 ]
 
 const io = new Server(server, {
